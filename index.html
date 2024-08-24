@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>StonePaperScissor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header><h1>Stone Paper Scissor</h1></header>
+
+    <main>
+      <button
+        class="buttons"
+        onclick="
+        let compurtChoice=generateComputerChoice();
+        let winner=whoIsWinner(`Stone`,compurtChoice);
+        showResult(`Stone`,compurtChoice,winner);
+        "
+      >
+        Stone
+      </button>
+
+      <button
+        class="buttons"
+        onclick="
+         compurtChoice=generateComputerChoice();
+         winner=whoIsWinner(`Paper`,compurtChoice);
+         showResult(`Paper`,compurtChoice,winner);
+        "
+      >
+        Paper
+      </button>
+
+      <button
+        class="buttons"
+        onclick="
+        compurtChoice=generateComputerChoice();
+        winner=whoIsWinner(`Scissor`,compurtChoice);
+       showResult(`Scissor`,compurtChoice,winner);
+       "
+      >
+        Scissor
+      </button>
+
+     
+    </main>
+
+    <footer>
+      
+      <div class="result"></div>
+      <div class="score"></div>
+
+     
+
+    </footer>
+
+    <button
+    class="reset-button"
+    onclick="
+  localStorage.clear();
+  updateScore();
+  "
+  >
+    Reset
+  </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
